@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <instruction text="avoid going between box3 and box2"/>
+  <world time="0">
+    <object name="o0" type="box3"/>
+    <object name="o1" type="box1"/>
+    <object name="o2" type="box2"/>
+  </world>
+  <VP>
+    <grounding>
+      <grounding_set>
+        <spatial_function type="avoid">
+          <spatial_function type="in_between">
+            <object name="o0" type="box3"/>
+            <object name="o2" type="box2"/>
+          </spatial_function>
+        </spatial_function>
+      </grounding_set>
+    </grounding>
+    <VB text="avoid"/>
+    <VP>
+      <grounding>
+        <grounding_set>
+          <spatial_function type="in_between">
+            <object name="o0" type="box3"/>
+            <object name="o2" type="box2"/>
+          </spatial_function>
+        </grounding_set>
+      </grounding>
+      <VBG text="going"/>
+      <PP>
+        <grounding>
+          <grounding_set>
+            <spatial_function type="in_between">
+              <object name="o0" type="box3"/>
+              <object name="o2" type="box2"/>
+            </spatial_function>
+          </grounding_set>
+        </grounding>
+        <IN text="between"/>
+        <NP>
+          <grounding>
+            <grounding_set>
+              <spatial_function type="na">
+                <object name="o0" type="box3"/>
+              </spatial_function>
+              <spatial_function type="na">
+                <object name="o2" type="box2"/>
+              </spatial_function>
+            </grounding_set>
+          </grounding>
+          <CC text="and"/>
+          <NP>
+            <grounding>
+              <grounding_set>
+                <spatial_function type="na">
+                  <object name="o0" type="box3"/>
+                </spatial_function>
+              </grounding_set>
+            </grounding>
+            <NN text="box3"/>
+          </NP>
+          <NP>
+            <grounding>
+              <grounding_set>
+                <spatial_function type="na">
+                  <object name="o2" type="box2"/>
+                </spatial_function>
+              </grounding_set>
+            </grounding>
+            <NN text="box2"/>
+          </NP>
+        </NP>
+      </PP>
+    </VP>
+  </VP>
+</root>
